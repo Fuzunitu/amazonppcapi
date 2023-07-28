@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aJWVaT3GzkrYjFGcU3hGLZX92mp3T6kNR0D+QK1auvU=",
+  "Source": "amazonppcapi",
+  "BasePath": "_content/amazonppcapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
