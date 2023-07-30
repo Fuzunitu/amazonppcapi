@@ -4,32 +4,31 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace amazonppcapi.Controllers
 {
-
     [ApiController]
-    [Route("api/BudgetReport")]
-    public class BudgetReportController : ControllerBase
+    [Route("api/TargetingReport")]
+    public class TargetingReportController : ControllerBase
     {
         private readonly MyDbContext _dbContext;
-        public BudgetReportController(MyDbContext dbContext)
+        public TargetingReportController(MyDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
+
         [HttpGet]
         public IActionResult GetProducts()
         {
-            var users = _dbContext.BudgetReport.ToList();
+            var users = _dbContext.TargetingReport.ToList();
             return Ok(users);//Ok(users);
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(BudgetReport environmentModel)
+        public async Task<IActionResult> CreateProduct(TargetingReport environmentModel)
         {
-            _dbContext.BudgetReport.Add(environmentModel);
+            _dbContext.TargetingReport.Add(environmentModel);
             await _dbContext.SaveChangesAsync();
 
-            return Ok();// Ok();
+            return Ok();
         }
     }
 }

@@ -3,7 +3,7 @@
     public class SearchTermReport
     {
         public int? Id { get; set; }
-        public DateTime? StrDate { get; set; }
+        public DateTimeOffset? StrDate { get; set; }
         public string? StrPortfolioName { get; set; }
         public string? StrCurrency { get; set; }
         public string? StrCampaignName { get; set; }

@@ -4,13 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace amazonppcapi.Controllers
 {
-
     [ApiController]
-    [Route("api/BudgetReport")]
-    public class BudgetReportController : ControllerBase
+    [Route("api/PerformanceOverTimeReport")]
+    public class PerformanceOverTimeReportController : ControllerBase
     {
         private readonly MyDbContext _dbContext;
-        public BudgetReportController(MyDbContext dbContext)
+        public PerformanceOverTimeReportController(MyDbContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -18,18 +17,17 @@ namespace amazonppcapi.Controllers
         [HttpGet]
         public IActionResult GetProducts()
         {
-            var users = _dbContext.BudgetReport.ToList();
+            var users = _dbContext.PerformanceOverTimeReport.ToList();
             return Ok(users);//Ok(users);
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(BudgetReport environmentModel)
+        public async Task<IActionResult> CreateProduct(PerformanceOverTimeReport environmentModel)
         {
-            _dbContext.BudgetReport.Add(environmentModel);
+            _dbContext.PerformanceOverTimeReport.Add(environmentModel);
             await _dbContext.SaveChangesAsync();
 
-            return Ok();// Ok();
+            return Ok();
         }
     }
 }

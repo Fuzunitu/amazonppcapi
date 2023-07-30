@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace amazonppcapi.Controllers
 {
     [ApiController]
-    [Route("api/base")]
-    public class BaseController
+    [Route("api/AdvertisedProductsReports")]
+    public class BaseController : ControllerBase
     {
         private readonly MyDbContext _dbContext;
         public BaseController(MyDbContext dbContext)
@@ -18,7 +18,7 @@ namespace amazonppcapi.Controllers
         public IActionResult GetProducts()
         {
             var users = _dbContext.AdvertisedProductsReports.ToList();
-            return null;//Ok(users);
+            return Ok(users);//Ok(users);
         }
 
 
@@ -28,7 +28,7 @@ namespace amazonppcapi.Controllers
             _dbContext.AdvertisedProductsReports.Add(environmentModel);
             await _dbContext.SaveChangesAsync();
 
-            return null;//Ok();
+            return Ok();
         }
     }
 }

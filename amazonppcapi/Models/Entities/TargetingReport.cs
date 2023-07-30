@@ -3,7 +3,7 @@
     public class TargetingReport
     {
         public int? Id { get; set; }
-        public DateTime? TrDate { get; set; }
+        public DateTimeOffset? TrDate { get; set; }
         public string? TrPortfolioName { get; set; }
         public string? TrCurrency { get; set; }
         public string? TrCampaignName { get; set; }

@@ -3,7 +3,7 @@
     public class GrossInvalidTrafficReport
     {
         public int? Id { get; set; }
-        public DateTime? GitrDate { get; set; }
+        public DateTimeOffset? GitrDate { get; set; }
         public string? GitrCampaignName { get; set; }
         public string? GitrStatus { get; set; }
         public int? GitrGrossImpressions { get; set; }

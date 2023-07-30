@@ -3,7 +3,7 @@
     public class PurchasedProductReport
     {
         public int? Id { get; set; }
-        public DateTime? PprDate { get; set; }
+        public DateTimeOffset? PprDate { get; set; }
         public string? PprPortfolioName { get; set; }
         public string? PprCurrency { get; set; }
         public string? PprCampaignName { get; set; }

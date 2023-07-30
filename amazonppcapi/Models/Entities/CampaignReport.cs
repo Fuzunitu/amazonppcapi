@@ -3,9 +3,9 @@
     public class CampaignReport
     {
         public int? Id { get; set; }
-        public DateTime? CrDate { get; set; }
-        public DateTime? CrStartDate { get; set; }
-        public DateTime? CrEndDate { get; set; }
+        public DateTimeOffset? CrDate { get; set; }
+        public DateTimeOffset? CrStartDate { get; set; }
+        public DateTimeOffset? CrEndDate { get; set; }
         public string? CrPortfolioName { get; set; }
         public string? CrCampaignType { get; set; }
         public string? CrCampaignName { get; set; }

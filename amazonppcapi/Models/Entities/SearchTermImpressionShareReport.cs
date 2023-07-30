@@ -3,7 +3,7 @@
     public class SearchTermImpressionShareReport
     {
         public int? Id { get; set; }
-        public DateTime? IsrDate { get; set; }
+        public DateTimeOffset? IsrDate { get; set; }
         public string? IsrCustomerSearchTerm { get; set; }
         public int? IsrSearchTermImpressionRank { get; set; }
         public decimal? IsrSearchTermImpressionShare { get; set; }

@@ -85,5 +85,5 @@ C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\obj\Deb
 C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\obj\Debug\net6.0\amazonppcapi.pdb
 C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\obj\Debug\net6.0\amazonppcapi.genruntimeconfig.cache
 C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\obj\Debug\net6.0\ref\amazonppcapi.dll
-C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
-C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\bin\Debug\net6.0\Npgsql.dll
+C:\Users\damla\OneDrive\Masaüstü\bitirme_api\amazonppcapi\amazonppcapi\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

@@ -4,13 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace amazonppcapi.Controllers
 {
-
     [ApiController]
-    [Route("api/BudgetReport")]
-    public class BudgetReportController : ControllerBase
+    [Route("api/SearchTermsReport")]
+    public class SearchTermReportController : ControllerBase
     {
         private readonly MyDbContext _dbContext;
-        public BudgetReportController(MyDbContext dbContext)
+        public SearchTermReportController(MyDbContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -18,18 +17,17 @@ namespace amazonppcapi.Controllers
         [HttpGet]
         public IActionResult GetProducts()
         {
-            var users = _dbContext.BudgetReport.ToList();
-            return Ok(users);//Ok(users);
+            var users = _dbContext.SearchTermsReport.ToList();
+            return Ok(users);
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(BudgetReport environmentModel)
+        public async Task<IActionResult> CreateProduct(SearchTermReport environmentModel)
         {
-            _dbContext.BudgetReport.Add(environmentModel);
+            _dbContext.SearchTermsReport.Add(environmentModel);
             await _dbContext.SaveChangesAsync();
 
-            return Ok();// Ok();
+            return Ok();
         }
     }
 }

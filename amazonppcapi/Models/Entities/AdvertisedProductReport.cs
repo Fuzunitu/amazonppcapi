@@ -3,7 +3,7 @@
     public class AdvertisedProductReport
     {
         public int Id { get; set; } // Primary Key
-        public DateTime AprDate { get; set; }
+        public DateTimeOffset AprDate { get; set; }
         public string? AprPortfolioName { get; set; }
         public string? AprCurrency { get; set; }
         public string? AprCampaignName { get; set; }

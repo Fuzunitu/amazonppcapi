@@ -3,9 +3,9 @@
     public class BudgetReport
     {
         public int Id { get; set; }
-        public DateTime? BrDate { get; set; }
-        public DateTime? BrStartDate { get; set; }
-        public DateTime? BrEndDate { get; set; }
+        public DateTimeOffset? BrDate { get; set; }
+        public DateTimeOffset? BrStartDate { get; set; }
+        public DateTimeOffset? BrEndDate { get; set; }
         public string? BrPortfolioName { get; set; }
         public string? BrCampaignType { get; set; }
         public string? BrCampaignName { get; set; }

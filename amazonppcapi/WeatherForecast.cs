@@ -2,7 +2,7 @@ namespace amazonppcapi
 {
     public class WeatherForecast
     {
-        public DateTime Date { get; set; }
+        public DateTimeOffset Date { get; set; }
 
         public int TemperatureC { get; set; }
 

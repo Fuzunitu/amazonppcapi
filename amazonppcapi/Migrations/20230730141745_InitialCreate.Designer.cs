@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using amazonppcapi.Models;
@@ -11,9 +12,11 @@ using amazonppcapi.Models;
 namespace amazonppcapi.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230730141745_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -364,64 +367,6 @@ namespace amazonppcapi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PerformanceOverTimeReport");
-                });
-
-            modelBuilder.Entity("amazonppcapi.Models.Entities.PlacementReport", b =>
-                {
-                    b.Property<int?>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
-
-                    b.Property<int?>("Pr7DayTotalOrders")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal?>("Pr7DayTotalSales")
-                        .HasColumnType("numeric");
-
-                    b.Property<int?>("Pr7DayTotalUnits")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("PrBiddingStrategy")
-                        .HasColumnType("text");
-
-                    b.Property<string>("PrCampaignName")
-                        .HasColumnType("text");
-
-                    b.Property<int?>("PrClicks")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal?>("PrCostPerClickCpc")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("PrCurrency")
-                        .HasColumnType("text");
-
-                    b.Property<DateTimeOffset?>("PrDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int?>("PrImpressions")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("PrPlacements")
-                        .HasColumnType("text");
-
-                    b.Property<string>("PrPortfolioName")
-                        .HasColumnType("text");
-
-                    b.Property<decimal?>("PrSpend")
-                        .HasColumnType("numeric");
-
-                    b.Property<decimal?>("PrTotalAdvertisingCostOfSalesAcos")
-                        .HasColumnType("numeric");
-
-                    b.Property<decimal?>("PrTotalReturnOnAdvertisingSpendRoas")
-                        .HasColumnType("numeric");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PlacementReport");
                 });
 
             modelBuilder.Entity("amazonppcapi.Models.Entities.PurchasedProductReport", b =>
